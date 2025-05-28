@@ -1,0 +1,175 @@
+/* Genel Stiller */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+}
+
+section {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section:nth-child(even) {
+    background-color: #f4f7f6;
+}
+
+/* Hero Bölümü */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Placeholder - değiştirilebilir */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero .tagline {
+    font-size: 1.1em;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Giriş Bölümü */
+.intro-section h2 {
+    color: #e67e22; /* Turuncu tonu */
+}
+
+/* Sistem Nasıl İşliyor Bölümü */
+.how-it-works-section h2 {
+    color: #3498db; /* Mavi tonu */
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.step h3 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+.step ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.step ul li::before {
+    content: "✓ ";
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Neden Ücretsiz Bölümü */
+.why-free-section h2 {
+    color: #9b59b6; /* Mor tonu */
+}
+
+/* Randevu Al Bölümü */
+.appointment-section h2 {
+    color: #27ae60; /* Yeşil tonu */
+}
+
+.appointment-section h3 {
+    margin-top: 0;
+}
+
+.calendar-embed {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* iframe kenarlıklarını gizlemek için */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* SSS Bölümü */
+.faq-section h2 {
+    color: #e74c3c; /* Kırmızımsı ton */
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 4px solid #e74c3c;
+    border-radius: 4px;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: #e74c3c;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Tasarım */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.8em;
+    }
+
+    .steps {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 80%;
+    }
+} 

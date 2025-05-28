@@ -1,0 +1,528 @@
+// Çoklu Dil Desteği - Multi-Language Support
+// Tıbbi Dedektiflik Website Language System
+
+const translations = {
+    tr: {
+        // Meta & Head
+        pageTitle: "🩺 Tıbbi Dedektiflik - Dr. Sadık Barış Adıgüzel | Güvenilir Sağlık Danışmanlığı",
+        metaDescription: "Dr. Sadık Barış Adıgüzel ile Tıbbi Dedektiflik - Güvenilir sağlık danışmanlığı ve ikinci görüş hizmeti. Ücretsiz, online ve profesyonel.",
+        metaKeywords: "tıbbi danışmanlık, sağlık, doktor, ikinci görüş, tıp, sağlık rehberliği",
+        
+        // Navigation & UI
+        languageSelector: "Dil Seçimi",
+        currentLanguage: "Türkçe",
+        switchToEnglish: "Switch to English",
+        
+        // Hero Section
+        heroTitle: "🩺 Tıbbi Dedektiflik",
+        heroSubtitle: "Sorunuzu getirin, birlikte iz sürelim.",
+        heroTagline: "Sağlık karmaşık olabilir. Ama doğru bilgiye ulaşmak, bazen sadece bir bakış açısı kadar uzaktadır.",
+        
+        // Hero Badges
+        badgeEvidenceBased: "🔬 Kanıta Dayalı",
+        badgeTrustworthy: "🤝 Güvenilir",
+        badgeFree: "💚 Ücretsiz",
+        
+        // Introduction Section
+        introTitle: "🧡 Giriş — Bu sayfa neden var?",
+        introGreeting: "Merhaba, ben Dr. Sadık Barış Adıgüzel.",
+        introP1: "Bu sayfayı, \"internet çok karışık, hocam ne yapacağımızı bilemiyoruz\" diyen tüm aileler ve bireyler için hazırladım.",
+        introP2: "Tıbbi Dedektiflik benim için sadece danışmanlık değil — bir tutku.",
+        introP3: "Kimi zaman PubMed'den başlayıp WHO'ya, Ayurveda'ya, Çin tıbbına uzanıyorum. Kaynağı ne olursa olsun, doğruyu bulmak benim için hem bir keyif hem bir sorumluluk.",
+        introP4: "Bu süreçte siz sorununuzu paylaşıyorsunuz, ben ise kaynaklara dalıyor, size sade, pratik ve yön gösterici bir özetle dönüyorum.",
+        
+        // How It Works Section
+        howItWorksTitle: "🔍 Bu Sistem Nasıl İşliyor?",
+        
+        // Step 1
+        step1Title: "📅 1. Randevu Alın",
+        step1Description: "Google Takvim üzerinden Salı veya Cuma günü için bir görüşme planlayın.",
+        step1Detail1: "🕓 Görüşmeler 30-45 dakika sürer.",
+        step1Detail2: "📍 Görüşmeler online olarak Google Meet üzerinden yapılır.",
+        
+        // Step 2
+        step2Title: "📝 2. Sorunuzu Yazın",
+        step2Description: "Randevu formunda kısaca sorununuzu anlatın.",
+        step2Detail: "💡 Varsa tanılar, tetkikler, önceki tedavilerden bahsedin.",
+        
+        // Step 3
+        step3Title: "🔬 3. Ben Araştırayım",
+        step3Description: "Görüşme öncesi ben:",
+        step3Item1: "📚 Literatür tararım",
+        step3Item2: "📋 Güncel kılavuzlara bakarım",
+        step3Item3: "🌐 Alternatif görüşleri de gözden geçiririm",
+        step3Item4: "👨‍⚕️ Klinik deneyimimle harmanlarım",
+        
+        // Step 4
+        step4Title: "💬 4. Görüşme Gerçekleşsin",
+        step4Description: "Sadeleştirilmiş ama anlamlı bir sağlık yol haritası çıkarırız.",
+        
+        // Step 5
+        step5Title: "📧 5. Size Özet & Kaynaklar Gönderirim",
+        step5Description: "Görüşme sonrası kaynaklarla desteklenmiş kısa bir özet e-postayla gelir.",
+        
+        // Why Free Section
+        whyFreeTitle: "💚 Neden Ücretsiz?",
+        whyFreeP1: "Bu benim hem merak ettiğim bir yolculuk, hem de öğrenme aracım.",
+        whyFreeP2: "Siz vakayı getiriyorsunuz, ben araştırıyor ve sunuyorum.",
+        whyFreeP3: "Karşılığında ben de kendimi geliştiriyor, paylaşmanın huzurunu yaşıyorum.",
+        whyFreeP4: "\"Alma–verme dengesi\"ne inanan bir doktor olarak bu hizmeti sunmaktan mutluluk duyuyorum.",
+        
+        // Appointment Section
+        appointmentTitle: "🗓️ Randevu Al",
+        appointmentSubtitle: "📅 Tıbbi Dedektiflik Görüşmesi İçin Randevu Al",
+        appointmentInfo: "Salı & Cuma günleri — Ücretsiz & Online",
+        appointmentNote: "⚡ Sınırlı kontenjan. Şeffaf, güvenli ve ticari amaçlı olmayan bir paylaşım alanı.",
+        
+        // FAQ Section
+        faqTitle: "❓ Sıkça Sorulanlar (SSS)",
+        
+        // FAQ Item 1
+        faq1Question: "🩺 Bu bir muayene mi?",
+        faq1Answer: "Hayır, tanı koymaz, reçete önermez. Bilgilendirici rehberliktir.",
+        
+        // FAQ Item 2
+        faq2Question: "🔒 Bilgilerim gizli mi kalacak?",
+        faq2Answer: "Evet. Tüm bilgiler sadece sen ve ben arasında kalır. İstersen anonimleştirilmiş vaka özetinde paylaşabilirim, izinle.",
+        
+        // FAQ Item 3
+        faq3Question: "🎯 Hangi tür sorular için uygundur?",
+        faq3Answer: "Karar veremediğiniz süreçler, belirsiz raporlar, ikinci görüşler için idealdir.",
+        
+        // Schema Data
+        schemaName: "Tıbbi Dedektiflik",
+        schemaDescription: "Dr. Sadık Barış Adıgüzel tarafından sunulan güvenilir sağlık danışmanlığı hizmeti",
+        schemaJobTitle: "Doktor",
+        schemaServiceType: "Sağlık Danışmanlığı",
+        schemaAreaServed: "Türkiye",
+        schemaPriceRange: "Ücretsiz"
+    },
+    
+    en: {
+        // Meta & Head
+        pageTitle: "🩺 Medical Detective - Dr. Sadık Barış Adıgüzel | Reliable Health Consultation",
+        metaDescription: "Medical Detective with Dr. Sadık Barış Adıgüzel - Reliable health consultation and second opinion service. Free, online and professional.",
+        metaKeywords: "medical consultation, health, doctor, second opinion, medicine, health guidance",
+        
+        // Navigation & UI
+        languageSelector: "Language Selection",
+        currentLanguage: "English",
+        switchToTurkish: "Türkçeye Geç",
+        
+        // Hero Section
+        heroTitle: "🩺 Medical Detective",
+        heroSubtitle: "Bring your question, let's track it together.",
+        heroTagline: "Health can be complex. But reaching the right information is sometimes just a perspective away.",
+        
+        // Hero Badges
+        badgeEvidenceBased: "🔬 Evidence-Based",
+        badgeTrustworthy: "🤝 Trustworthy",
+        badgeFree: "💚 Free",
+        
+        // Introduction Section
+        introTitle: "🧡 Introduction — Why does this page exist?",
+        introGreeting: "Hello, I am Dr. Sadık Barış Adıgüzel.",
+        introP1: "I prepared this page for all families and individuals who say \"the internet is so confusing, doctor, we don't know what to do.\"",
+        introP2: "Medical Detective is not just consultation for me — it's a passion.",
+        introP3: "Sometimes I start from PubMed and extend to WHO, Ayurveda, Chinese medicine. Whatever the source, finding the truth is both a pleasure and a responsibility for me.",
+        introP4: "In this process, you share your problem, and I dive into sources and return to you with a simple, practical and guiding summary.",
+        
+        // How It Works Section
+        howItWorksTitle: "🔍 How Does This System Work?",
+        
+        // Step 1
+        step1Title: "📅 1. Make an Appointment",
+        step1Description: "Schedule a meeting for Tuesday or Friday via Google Calendar.",
+        step1Detail1: "🕓 Meetings last 30-45 minutes.",
+        step1Detail2: "📍 Meetings are conducted online via Google Meet.",
+        
+        // Step 2
+        step2Title: "📝 2. Write Your Problem",
+        step2Description: "Briefly describe your problem in the appointment form.",
+        step2Detail: "💡 If available, mention diagnoses, tests, previous treatments.",
+        
+        // Step 3
+        step3Title: "🔬 3. Let Me Research",
+        step3Description: "Before the meeting, I:",
+        step3Item1: "📚 Review the literature",
+        step3Item2: "📋 Check current guidelines",
+        step3Item3: "🌐 Review alternative opinions",
+        step3Item4: "👨‍⚕️ Combine with my clinical experience",
+        
+        // Step 4
+        step4Title: "💬 4. Let the Meeting Happen",
+        step4Description: "We create a simplified but meaningful health roadmap.",
+        
+        // Step 5
+        step5Title: "📧 5. I Send You Summary & Sources",
+        step5Description: "After the meeting, a brief summary supported by sources comes via email.",
+        
+        // Why Free Section
+        whyFreeTitle: "💚 Why Free?",
+        whyFreeP1: "This is both a journey I'm curious about and my learning tool.",
+        whyFreeP2: "You bring the case, I research and present.",
+        whyFreeP3: "In return, I also develop myself and experience the peace of sharing.",
+        whyFreeP4: "As a doctor who believes in \"give-and-take balance\", I am happy to provide this service.",
+        
+        // Appointment Section
+        appointmentTitle: "🗓️ Make an Appointment",
+        appointmentSubtitle: "📅 Make an Appointment for Medical Detective Consultation",
+        appointmentInfo: "Tuesday & Friday — Free & Online",
+        appointmentNote: "⚡ Limited quota. Transparent, secure and non-commercial sharing space.",
+        
+        // FAQ Section
+        faqTitle: "❓ Frequently Asked Questions (FAQ)",
+        
+        // FAQ Item 1
+        faq1Question: "🩺 Is this an examination?",
+        faq1Answer: "No, it does not diagnose or suggest prescriptions. It is informational guidance.",
+        
+        // FAQ Item 2
+        faq2Question: "🔒 Will my information remain confidential?",
+        faq2Answer: "Yes. All information remains only between you and me. If you wish, I can share it in an anonymized case summary, with your permission.",
+        
+        // FAQ Item 3
+        faq3Question: "🎯 What types of questions is it suitable for?",
+        faq3Answer: "It is ideal for processes you can't decide on, unclear reports, second opinions.",
+        
+        // Schema Data
+        schemaName: "Medical Detective",
+        schemaDescription: "Reliable health consultation service provided by Dr. Sadık Barış Adıgüzel",
+        schemaJobTitle: "Doctor",
+        schemaServiceType: "Health Consultation",
+        schemaAreaServed: "Turkey",
+        schemaPriceRange: "Free"
+    }
+};
+
+// Language System Class
+class LanguageSystem {
+    constructor() {
+        this.currentLanguage = this.detectLanguage();
+        this.init();
+    }
+    
+    detectLanguage() {
+        // URL parametresinden dil kontrolü
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
+        
+        if (urlLang && translations[urlLang]) {
+            return urlLang;
+        }
+        
+        // Local storage'dan dil kontrolü
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && translations[savedLang]) {
+            return savedLang;
+        }
+        
+        // Browser dilinden algılama
+        const browserLang = navigator.language || navigator.userLanguage;
+        const langCode = browserLang.substring(0, 2);
+        
+        if (translations[langCode]) {
+            return langCode;
+        }
+        
+        // Varsayılan Türkçe
+        return 'tr';
+    }
+    
+    init() {
+        this.createLanguageSelector();
+        this.translatePage();
+        this.updateURL();
+        
+        // Browser history için
+        window.addEventListener('popstate', () => {
+            this.currentLanguage = this.detectLanguage();
+            this.translatePage();
+        });
+    }
+    
+    createLanguageSelector() {
+        // Language selector oluştur
+        const header = document.querySelector('.hero .container');
+        if (!header) return;
+        
+        const languageSelector = document.createElement('div');
+        languageSelector.className = 'language-selector';
+        languageSelector.innerHTML = `
+            <div class="lang-dropdown">
+                <button class="lang-current" aria-label="${translations[this.currentLanguage].languageSelector}">
+                    <span class="lang-flag">${this.currentLanguage === 'tr' ? '🇹🇷' : '🇺🇸'}</span>
+                    <span class="lang-text">${translations[this.currentLanguage].currentLanguage}</span>
+                    <span class="lang-arrow">▼</span>
+                </button>
+                <div class="lang-options">
+                    <button class="lang-option" data-lang="tr" ${this.currentLanguage === 'tr' ? 'aria-current="true"' : ''}>
+                        <span class="lang-flag">🇹🇷</span>
+                        <span class="lang-text">Türkçe</span>
+                    </button>
+                    <button class="lang-option" data-lang="en" ${this.currentLanguage === 'en' ? 'aria-current="true"' : ''}>
+                        <span class="lang-flag">🇺🇸</span>
+                        <span class="lang-text">English</span>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Header'ın başına ekle
+        header.insertBefore(languageSelector, header.firstChild);
+        
+        // Event listeners
+        const dropdown = languageSelector.querySelector('.lang-dropdown');
+        const currentBtn = dropdown.querySelector('.lang-current');
+        const options = dropdown.querySelectorAll('.lang-option');
+        
+        currentBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('open');
+        });
+        
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                const newLang = e.currentTarget.dataset.lang;
+                if (newLang !== this.currentLanguage) {
+                    this.switchLanguage(newLang);
+                }
+                dropdown.classList.remove('open');
+            });
+        });
+        
+        // Dışarı tıklandığında kapat
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+    }
+    
+    switchLanguage(newLang) {
+        if (!translations[newLang]) return;
+        
+        this.currentLanguage = newLang;
+        localStorage.setItem('preferredLanguage', newLang);
+        
+        this.translatePage();
+        this.updateURL();
+        this.updateLanguageSelector();
+        
+        // Google Analytics event (eğer varsa)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'language_change', {
+                'custom_parameter': newLang
+            });
+        }
+    }
+    
+    translatePage() {
+        const t = translations[this.currentLanguage];
+        
+        // Document title
+        document.title = t.pageTitle;
+        
+        // Meta tags
+        this.updateMetaTag('description', t.metaDescription);
+        this.updateMetaTag('keywords', t.metaKeywords);
+        this.updateMetaTag('og:title', t.pageTitle);
+        this.updateMetaTag('og:description', t.metaDescription);
+        this.updateMetaTag('twitter:title', t.pageTitle);
+        this.updateMetaTag('twitter:description', t.metaDescription);
+        
+        // HTML lang attribute
+        document.documentElement.lang = this.currentLanguage;
+        
+        // Hero section
+        this.updateText('.hero h1', t.heroTitle);
+        this.updateText('.hero .subtitle', t.heroSubtitle);
+        this.updateText('.hero .tagline', t.heroTagline);
+        
+        // Hero badges
+        const badges = document.querySelectorAll('.hero-badges .medical-badge');
+        if (badges.length >= 3) {
+            badges[0].textContent = t.badgeEvidenceBased;
+            badges[1].textContent = t.badgeTrustworthy;
+            badges[2].textContent = t.badgeFree;
+        }
+        
+        // Introduction section
+        this.updateText('#intro h2', t.introTitle);
+        const introPs = document.querySelectorAll('#intro .intro-content p');
+        if (introPs.length >= 5) {
+            introPs[0].innerHTML = `<strong>${t.introGreeting}</strong>`;
+            introPs[1].innerHTML = `${t.introP1.replace('"internet çok karışık, hocam ne yapacağımızı bilemiyoruz"', '<em>"' + (this.currentLanguage === 'tr' ? 'internet çok karışık, hocam ne yapacağımızı bilemiyoruz' : 'the internet is so confusing, doctor, we don\'t know what to do') + '"</em>')}`;
+            introPs[2].innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Tıbbi Dedektiflik' : 'Medical Detective'}</strong> ${t.introP2.replace('Tıbbi Dedektiflik', '').replace('Medical Detective', '')} — bir <em>${this.currentLanguage === 'tr' ? 'tutku' : 'passion'}</em>.`;
+            introPs[3].innerHTML = t.introP3.replace(/PubMed|WHO|Ayurveda|Çin tıbbına/g, '<strong>$&</strong>');
+            introPs[4].innerHTML = t.introP4.replace(/(sade, pratik ve yön gösterici|simple, practical and guiding)/g, '<strong>$1</strong>');
+        }
+        
+        // How it works section
+        this.updateText('#how-it-works h2', t.howItWorksTitle);
+        
+        // Steps
+        const steps = document.querySelectorAll('.step');
+        if (steps.length >= 5) {
+            // Step 1
+            this.updateText(steps[0].querySelector('h3'), t.step1Title);
+            this.updateText(steps[0].querySelector('p'), t.step1Description.replace(/(Salı|Cuma|Tuesday|Friday)/g, '<strong>$1</strong>'));
+            const step1Details = steps[0].querySelectorAll('.step-details p small');
+            if (step1Details.length >= 2) {
+                step1Details[0].innerHTML = t.step1Detail1.replace(/(30-45 dakika|30-45 minutes)/g, '<strong>$1</strong>');
+                step1Details[1].innerHTML = t.step1Detail2.replace(/(online|Google Meet)/g, '<strong>$1</strong>');
+            }
+            
+            // Step 2
+            this.updateText(steps[1].querySelector('h3'), t.step2Title);
+            this.updateText(steps[1].querySelector('p'), t.step2Description);
+            const step2Detail = steps[1].querySelector('.step-details p small');
+            if (step2Detail) {
+                step2Detail.innerHTML = t.step2Detail.replace(/(tanılar, tetkikler, önceki tedaviler|diagnoses, tests, previous treatments)/g, '<strong>$1</strong>');
+            }
+            
+            // Step 3
+            this.updateText(steps[2].querySelector('h3'), t.step3Title);
+            this.updateText(steps[2].querySelector('p'), t.step3Description);
+            const step3Items = steps[2].querySelectorAll('ul li');
+            if (step3Items.length >= 4) {
+                step3Items[0].textContent = t.step3Item1;
+                step3Items[1].textContent = t.step3Item2;
+                step3Items[2].textContent = t.step3Item3;
+                step3Items[3].textContent = t.step3Item4;
+            }
+            
+            // Step 4
+            this.updateText(steps[3].querySelector('h3'), t.step4Title);
+            this.updateText(steps[3].querySelector('p'), t.step4Description.replace(/(Sadeleştirilmiş|anlamlı|Simplified|meaningful)/g, '<strong>$1</strong>'));
+            
+            // Step 5
+            this.updateText(steps[4].querySelector('h3'), t.step5Title);
+            this.updateText(steps[4].querySelector('p'), t.step5Description.replace(/(kaynaklarla desteklenmiş|supported by sources)/g, '<strong>$1</strong>'));
+        }
+        
+        // Why free section
+        this.updateText('#why-free h2', t.whyFreeTitle);
+        const whyFreePs = document.querySelectorAll('#why-free .why-free-content p');
+        if (whyFreePs.length >= 4) {
+            whyFreePs[0].innerHTML = t.whyFreeP1.replace(/(merak ettiğim bir yolculuk|öğrenme aracım|journey I'm curious about|learning tool)/g, '<strong>$1</strong>');
+            whyFreePs[1].textContent = t.whyFreeP2;
+            whyFreePs[2].innerHTML = t.whyFreeP3.replace(/(kendimi geliştiriyor|paylaşmanın huzurunu|develop myself|peace of sharing)/g, '<strong>$1</strong>').replace(/(paylaşmanın huzurunu|peace of sharing)/g, '<em>$1</em>');
+            whyFreePs[3].innerHTML = t.whyFreeP4.replace(/(Alma–verme dengesi|give-and-take balance)/g, '<strong>"$1"</strong>');
+        }
+        
+        // Appointment section
+        this.updateText('#appointment h2', t.appointmentTitle);
+        this.updateText('#appointment h3', t.appointmentSubtitle);
+        const appointmentInfo = document.querySelector('.appointment-info p');
+        if (appointmentInfo) {
+            appointmentInfo.innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Salı & Cuma günleri' : 'Tuesday & Friday'}</strong> — <span class="medical-badge">${this.currentLanguage === 'tr' ? 'Ücretsiz' : 'Free'}</span> & <span class="medical-badge">Online</span>`;
+        }
+        const appointmentNote = document.querySelector('.appointment-note small');
+        if (appointmentNote) {
+            appointmentNote.innerHTML = t.appointmentNote.replace(/(Sınırlı kontenjan|Limited quota)/g, '<strong>$1</strong>');
+        }
+        
+        // FAQ section
+        this.updateText('#faq h2', t.faqTitle);
+        const faqItems = document.querySelectorAll('.faq-item');
+        if (faqItems.length >= 3) {
+            // FAQ 1
+            this.updateText(faqItems[0].querySelector('h3'), t.faq1Question);
+            faqItems[0].querySelector('p').innerHTML = t.faq1Answer.replace(/(Hayır|Bilgilendirici rehberliktir|No|informational guidance)/g, '<strong>$1</strong>').replace(/(Bilgilendirici rehberliktir|informational guidance)/g, '<em>$1</em>');
+            
+            // FAQ 2
+            this.updateText(faqItems[1].querySelector('h3'), t.faq2Question);
+            faqItems[1].querySelector('p').innerHTML = t.faq2Answer.replace(/(Evet|anonimleştirilmiş vaka özetinde|izinle|Yes|anonymized case summary|with your permission)/g, '<strong>$1</strong>').replace(/(anonimleştirilmiş vaka özetinde|anonymized case summary)/g, '<em>$1</em>');
+            
+            // FAQ 3
+            this.updateText(faqItems[2].querySelector('h3'), t.faq3Question);
+            faqItems[2].querySelector('p').innerHTML = t.faq3Answer.replace(/(Karar veremediğiniz süreçler|belirsiz raporlar|ikinci görüşler|processes you can't decide on|unclear reports|second opinions)/g, '<strong>$1</strong>').replace(/(belirsiz raporlar|unclear reports)/g, '<em>$1</em>');
+        }
+        
+        // Schema.org structured data
+        this.updateSchemaData(t);
+    }
+    
+    updateText(selector, text) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.textContent = text;
+        }
+    }
+    
+    updateMetaTag(name, content) {
+        let selector = `meta[name="${name}"]`;
+        if (name.startsWith('og:') || name.startsWith('twitter:')) {
+            selector = `meta[property="${name}"]`;
+        }
+        
+        const meta = document.querySelector(selector);
+        if (meta) {
+            meta.setAttribute('content', content);
+        }
+    }
+    
+    updateLanguageSelector() {
+        const currentBtn = document.querySelector('.lang-current');
+        const options = document.querySelectorAll('.lang-option');
+        
+        if (currentBtn) {
+            const t = translations[this.currentLanguage];
+            currentBtn.innerHTML = `
+                <span class="lang-flag">${this.currentLanguage === 'tr' ? '🇹🇷' : '🇺🇸'}</span>
+                <span class="lang-text">${t.currentLanguage}</span>
+                <span class="lang-arrow">▼</span>
+            `;
+        }
+        
+        options.forEach(option => {
+            const lang = option.dataset.lang;
+            option.setAttribute('aria-current', lang === this.currentLanguage ? 'true' : 'false');
+        });
+    }
+    
+    updateURL() {
+        const url = new URL(window.location);
+        if (this.currentLanguage !== 'tr') {
+            url.searchParams.set('lang', this.currentLanguage);
+        } else {
+            url.searchParams.delete('lang');
+        }
+        
+        window.history.replaceState({}, '', url);
+    }
+    
+    updateSchemaData(t) {
+        const schemaScript = document.querySelector('script[type="application/ld+json"]');
+        if (schemaScript) {
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "MedicalBusiness",
+                "name": t.schemaName,
+                "description": t.schemaDescription,
+                "provider": {
+                    "@type": "Person",
+                    "name": "Dr. Sadık Barış Adıgüzel",
+                    "jobTitle": t.schemaJobTitle
+                },
+                "url": "https://baro007.github.io/tibbidedektif/",
+                "serviceType": t.schemaServiceType,
+                "areaServed": t.schemaAreaServed,
+                "availableLanguage": this.currentLanguage,
+                "priceRange": t.schemaPriceRange
+            };
+            
+            schemaScript.textContent = JSON.stringify(schemaData, null, 4);
+        }
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    window.languageSystem = new LanguageSystem();
+});
+
+// Export for module usage
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { translations, LanguageSystem };
+} 

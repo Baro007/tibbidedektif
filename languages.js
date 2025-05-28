@@ -123,7 +123,7 @@ const translations = {
         introTitle: "🧡 Introduction — Why does this page exist?",
         introGreeting: "Hello, I am Dr. Sadık Barış Adıgüzel.",
         introP1: "I prepared this page for all families and individuals who say \"the internet is so confusing, doctor, we don't know what to do.\"",
-        introP2: "Medical Detective is not just consultation for me — it's a passion.",
+        introP2: "is not just consultation for me — it's a passion.",
         introP3: "Sometimes I start from PubMed and extend to WHO, Ayurveda, Chinese medicine. Whatever the source, finding the truth is both a pleasure and a responsibility for me.",
         introP4: "In this process, you share your problem, and I dive into sources and return to you with a simple, practical and guiding summary.",
         
@@ -347,25 +347,28 @@ class LanguageSystem {
         }
         
         // Introduction section
-        this.updateText('#intro h2', t.introTitle);
+        this.updateHTML('#intro h2', t.introTitle);
         const introPs = document.querySelectorAll('#intro .intro-content p');
         if (introPs.length >= 5) {
             introPs[0].innerHTML = `<strong>${t.introGreeting}</strong>`;
-            introPs[1].innerHTML = `${t.introP1.replace('"internet çok karışık, hocam ne yapacağımızı bilemiyoruz"', '<em>"' + (this.currentLanguage === 'tr' ? 'internet çok karışık, hocam ne yapacağımızı bilemiyoruz' : 'the internet is so confusing, doctor, we don\'t know what to do') + '"</em>')}`;
-            introPs[2].innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Tıbbi Dedektiflik' : 'Medical Detective'}</strong> ${t.introP2.replace('Tıbbi Dedektiflik', '').replace('Medical Detective', '')} — bir <em>${this.currentLanguage === 'tr' ? 'tutku' : 'passion'}</em>.`;
-            introPs[3].innerHTML = t.introP3.replace(/PubMed|WHO|Ayurveda|Çin tıbbına/g, '<strong>$&</strong>');
+            introPs[1].innerHTML = t.introP1.replace(
+                /(internet çok karışık, hocam ne yapacağımızı bilemiyoruz|the internet is so confusing, doctor, we don't know what to do)/g, 
+                '<em>"$1"</em>'
+            );
+            introPs[2].innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Tıbbi Dedektiflik' : 'Medical Detective'}</strong> ${t.introP2.replace(/Tıbbi Dedektiflik|Medical Detective/, '')} — bir <em>${this.currentLanguage === 'tr' ? 'tutku' : 'passion'}</em>.`;
+            introPs[3].innerHTML = t.introP3.replace(/(PubMed|WHO|Ayurveda|Çin tıbbına|Chinese medicine)/g, '<strong>$1</strong>');
             introPs[4].innerHTML = t.introP4.replace(/(sade, pratik ve yön gösterici|simple, practical and guiding)/g, '<strong>$1</strong>');
         }
         
         // How it works section
-        this.updateText('#how-it-works h2', t.howItWorksTitle);
+        this.updateHTML('#how-it-works h2', t.howItWorksTitle);
         
         // Steps
         const steps = document.querySelectorAll('.step');
         if (steps.length >= 5) {
             // Step 1
-            this.updateText(steps[0].querySelector('h3'), t.step1Title);
-            this.updateText(steps[0].querySelector('p'), t.step1Description.replace(/(Salı|Cuma|Tuesday|Friday)/g, '<strong>$1</strong>'));
+            this.updateHTML(steps[0].querySelector('h3'), t.step1Title);
+            this.updateHTML(steps[0].querySelector('p'), t.step1Description.replace(/(Salı|Cuma|Tuesday|Friday)/g, '<strong>$1</strong>'));
             const step1Details = steps[0].querySelectorAll('.step-details p small');
             if (step1Details.length >= 2) {
                 step1Details[0].innerHTML = t.step1Detail1.replace(/(30-45 dakika|30-45 minutes)/g, '<strong>$1</strong>');
@@ -373,16 +376,16 @@ class LanguageSystem {
             }
             
             // Step 2
-            this.updateText(steps[1].querySelector('h3'), t.step2Title);
-            this.updateText(steps[1].querySelector('p'), t.step2Description);
+            this.updateHTML(steps[1].querySelector('h3'), t.step2Title);
+            this.updateHTML(steps[1].querySelector('p'), t.step2Description);
             const step2Detail = steps[1].querySelector('.step-details p small');
             if (step2Detail) {
                 step2Detail.innerHTML = t.step2Detail.replace(/(tanılar, tetkikler, önceki tedaviler|diagnoses, tests, previous treatments)/g, '<strong>$1</strong>');
             }
             
             // Step 3
-            this.updateText(steps[2].querySelector('h3'), t.step3Title);
-            this.updateText(steps[2].querySelector('p'), t.step3Description);
+            this.updateHTML(steps[2].querySelector('h3'), t.step3Title);
+            this.updateHTML(steps[2].querySelector('p'), t.step3Description);
             const step3Items = steps[2].querySelectorAll('ul li');
             if (step3Items.length >= 4) {
                 step3Items[0].textContent = t.step3Item1;
@@ -392,16 +395,16 @@ class LanguageSystem {
             }
             
             // Step 4
-            this.updateText(steps[3].querySelector('h3'), t.step4Title);
-            this.updateText(steps[3].querySelector('p'), t.step4Description.replace(/(Sadeleştirilmiş|anlamlı|Simplified|meaningful)/g, '<strong>$1</strong>'));
+            this.updateHTML(steps[3].querySelector('h3'), t.step4Title);
+            this.updateHTML(steps[3].querySelector('p'), t.step4Description.replace(/(Sadeleştirilmiş|anlamlı|Simplified|meaningful)/g, '<strong>$1</strong>'));
             
             // Step 5
-            this.updateText(steps[4].querySelector('h3'), t.step5Title);
-            this.updateText(steps[4].querySelector('p'), t.step5Description.replace(/(kaynaklarla desteklenmiş|supported by sources)/g, '<strong>$1</strong>'));
+            this.updateHTML(steps[4].querySelector('h3'), t.step5Title);
+            this.updateHTML(steps[4].querySelector('p'), t.step5Description.replace(/(kaynaklarla desteklenmiş|supported by sources)/g, '<strong>$1</strong>'));
         }
         
         // Why free section
-        this.updateText('#why-free h2', t.whyFreeTitle);
+        this.updateHTML('#why-free h2', t.whyFreeTitle);
         const whyFreePs = document.querySelectorAll('#why-free .why-free-content p');
         if (whyFreePs.length >= 4) {
             whyFreePs[0].innerHTML = t.whyFreeP1.replace(/(merak ettiğim bir yolculuk|öğrenme aracım|journey I'm curious about|learning tool)/g, '<strong>$1</strong>');
@@ -411,8 +414,8 @@ class LanguageSystem {
         }
         
         // Appointment section
-        this.updateText('#appointment h2', t.appointmentTitle);
-        this.updateText('#appointment h3', t.appointmentSubtitle);
+        this.updateHTML('#appointment h2', t.appointmentTitle);
+        this.updateHTML('#appointment h3', t.appointmentSubtitle);
         const appointmentInfo = document.querySelector('.appointment-info p');
         if (appointmentInfo) {
             appointmentInfo.innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Salı & Cuma günleri' : 'Tuesday & Friday'}</strong> — <span class="medical-badge">${this.currentLanguage === 'tr' ? 'Ücretsiz' : 'Free'}</span> & <span class="medical-badge">Online</span>`;
@@ -423,19 +426,19 @@ class LanguageSystem {
         }
         
         // FAQ section
-        this.updateText('#faq h2', t.faqTitle);
+        this.updateHTML('#faq h2', t.faqTitle);
         const faqItems = document.querySelectorAll('.faq-item');
         if (faqItems.length >= 3) {
             // FAQ 1
-            this.updateText(faqItems[0].querySelector('h3'), t.faq1Question);
+            this.updateHTML(faqItems[0].querySelector('h3'), t.faq1Question);
             faqItems[0].querySelector('p').innerHTML = t.faq1Answer.replace(/(Hayır|Bilgilendirici rehberliktir|No|informational guidance)/g, '<strong>$1</strong>').replace(/(Bilgilendirici rehberliktir|informational guidance)/g, '<em>$1</em>');
             
             // FAQ 2
-            this.updateText(faqItems[1].querySelector('h3'), t.faq2Question);
+            this.updateHTML(faqItems[1].querySelector('h3'), t.faq2Question);
             faqItems[1].querySelector('p').innerHTML = t.faq2Answer.replace(/(Evet|anonimleştirilmiş vaka özetinde|izinle|Yes|anonymized case summary|with your permission)/g, '<strong>$1</strong>').replace(/(anonimleştirilmiş vaka özetinde|anonymized case summary)/g, '<em>$1</em>');
             
             // FAQ 3
-            this.updateText(faqItems[2].querySelector('h3'), t.faq3Question);
+            this.updateHTML(faqItems[2].querySelector('h3'), t.faq3Question);
             faqItems[2].querySelector('p').innerHTML = t.faq3Answer.replace(/(Karar veremediğiniz süreçler|belirsiz raporlar|ikinci görüşler|processes you can't decide on|unclear reports|second opinions)/g, '<strong>$1</strong>').replace(/(belirsiz raporlar|unclear reports)/g, '<em>$1</em>');
         }
         
@@ -444,9 +447,16 @@ class LanguageSystem {
     }
     
     updateText(selector, text) {
-        const element = document.querySelector(selector);
+        const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
         if (element) {
             element.textContent = text;
+        }
+    }
+    
+    updateHTML(selector, html) {
+        const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
+        if (element) {
+            element.innerHTML = html;
         }
     }
     

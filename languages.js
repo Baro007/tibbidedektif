@@ -27,9 +27,9 @@ const translations = {
         introTitle: "🧡 Giriş — Bu sayfa neden var?",
         introGreeting: "Merhaba, ben Dr. Sadık Barış Adıgüzel.",
         introP1: "Bu sayfayı, \"internet çok karışık, hocam ne yapacağımızı bilemiyoruz\" diyen tüm aileler ve bireyler için hazırladım.",
-        introP2: "Tıbbi Dedektiflik benim için sadece danışmanlık değil — bir tutku.",
-        introP3: "Kimi zaman PubMed'den başlayıp WHO'ya, Ayurveda'ya, Çin tıbbına uzanıyorum. Kaynağı ne olursa olsun, doğruyu bulmak benim için hem bir keyif hem bir sorumluluk.",
-        introP4: "Bu süreçte siz sorununuzu paylaşıyorsunuz, ben ise kaynaklara dalıyor, size sade, pratik ve yön gösterici bir özetle dönüyorum.",
+        introP2: "benim için sadece bir meslek değil — gerçek bir tutku.",
+        introP3: "Bazen PubMed'deki en son araştırmalardan başlayıp WHO verilerine, Ayurveda'dan Çin tıbbına kadar geniş bir yelpazede araştırma yapıyorum. Hangi kaynaktan gelirse gelsin, doğru bilgiyi bulmak ve sizlerle paylaşmak benim hem zevk aldığım hem de sorumluluğunu hissettiğim bir iş.",
+        introP4: "Süreç çok basit: Siz sağlık sorununu benimle paylaşıyorsunuz, ben tüm kaynaklara dalıp araştırıyorum ve size anlaşılır, pratik ve yol gösterici bir özet sunuyorum.",
         
         // How It Works Section
         howItWorksTitle: "🔍 Bu Sistem Nasıl İşliyor?",
@@ -122,10 +122,10 @@ const translations = {
         // Introduction Section
         introTitle: "🧡 Introduction — Why does this page exist?",
         introGreeting: "Hello, I am Dr. Sadık Barış Adıgüzel.",
-        introP1: "I prepared this page for all families and individuals who say \"the internet is so confusing, doctor, we don't know what to do.\"",
-        introP2: "is not just consultation for me — it's a passion.",
-        introP3: "Sometimes I start from PubMed and extend to WHO, Ayurveda, Chinese medicine. Whatever the source, finding the truth is both a pleasure and a responsibility for me.",
-        introP4: "In this process, you share your problem, and I dive into sources and return to you with a simple, practical and guiding summary.",
+        introP1: "I created this page for all families and individuals who say \"the internet is so confusing, doctor, we don't know what to do.\"",
+        introP2: "is not just a profession for me — it's a genuine passion.",
+        introP3: "Sometimes I start with the latest research on PubMed and extend to WHO data, from Ayurveda to Chinese medicine, conducting research across a wide spectrum. Whatever the source, finding accurate information and sharing it with you is both something I enjoy and feel responsible for.",
+        introP4: "The process is simple: You share your health concern with me, I dive deep into all available sources and provide you with a clear, practical and guiding summary.",
         
         // How It Works Section
         howItWorksTitle: "🔍 How Does This System Work?",
@@ -251,7 +251,7 @@ class LanguageSystem {
         languageSelector.innerHTML = `
             <div class="lang-dropdown">
                 <button class="lang-current" aria-label="${translations[this.currentLanguage].languageSelector}">
-                    <span class="lang-flag">${this.currentLanguage === 'tr' ? '🇹🇷' : '🇺🇸'}</span>
+                    <span class="lang-flag">${this.currentLanguage === 'tr' ? '🇹��' : '🇺🇸'}</span>
                     <span class="lang-text">${translations[this.currentLanguage].currentLanguage}</span>
                     <span class="lang-arrow">▼</span>
                 </button>
@@ -355,9 +355,9 @@ class LanguageSystem {
                 /(internet çok karışık, hocam ne yapacağımızı bilemiyoruz|the internet is so confusing, doctor, we don't know what to do)/g, 
                 '<em>"$1"</em>'
             );
-            introPs[2].innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Tıbbi Dedektiflik' : 'Medical Detective'}</strong> ${t.introP2.replace(/Tıbbi Dedektiflik|Medical Detective/, '')} — bir <em>${this.currentLanguage === 'tr' ? 'tutku' : 'passion'}</em>.`;
+            introPs[2].innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Tıbbi Dedektiflik' : 'Medical Detective'}</strong> ${t.introP2.replace(/Tıbbi Dedektiflik|Medical Detective/, '')} — gerçek bir <em>${this.currentLanguage === 'tr' ? 'tutku' : 'passion'}</em>.`;
             introPs[3].innerHTML = t.introP3.replace(/(PubMed|WHO|Ayurveda|Çin tıbbına|Chinese medicine)/g, '<strong>$1</strong>');
-            introPs[4].innerHTML = t.introP4.replace(/(sade, pratik ve yön gösterici|simple, practical and guiding)/g, '<strong>$1</strong>');
+            introPs[4].innerHTML = t.introP4.replace(/(anlaşılır, pratik ve yol gösterici|clear, practical and guiding)/g, '<strong>$1</strong>');
         }
         
         // How it works section

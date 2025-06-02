@@ -849,4 +849,63 @@ section::before {
     .lang-current.loading .lang-arrow {
         animation: none;
     }
+}
+
+.intro-section .intro-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Dikeyde yukarı hizala */
+    gap: calc(var(--spacing-unit) * 5); /* Metin ve resim arası boşluk */
+}
+
+.intro-section .intro-text {
+    flex: 2; /* Metin alanı daha geniş olsun */
+    max-width: 65%; /* Metin alanının maksimum genişliği */
+}
+
+.intro-section .intro-image-container {
+    flex: 1; /* Resim alanı */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Resmi yukarı hizala */
+    padding-top: calc(var(--spacing-unit) * 1); /* Resmin üstüne hafif boşluk */
+    max-width: 35%; /* Resim alanının maksimum genişliği */
+}
+
+.intro-section .intro-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-extra);
+    object-fit: cover; /* Resmin orantısını koruyarak alanı doldur */
+    border: 3px solid var(--pure-white);
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 1024px) {
+    .intro-section .intro-content {
+        flex-direction: column;
+        align-items: center; /* Ortala */
+        gap: calc(var(--spacing-unit) * 4);
+    }
+
+    .intro-section .intro-text {
+        max-width: 100%;
+        text-align: left; /* Mobil için metni sola yasla */
+    }
+
+    .intro-section .intro-image-container {
+        max-width: 60%; /* Mobil için resmi biraz daha büyük yapabiliriz */
+        order: -1; /* Resmi metnin üstüne al */
+        margin-bottom: calc(var(--spacing-unit) * 3);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-section .intro-image-container {
+        max-width: 80%;
+    }
+    .intro-section .intro-text p {
+        font-size: 1rem; /* Mobil için paragraf fontunu biraz küçült */
+    }
 } 

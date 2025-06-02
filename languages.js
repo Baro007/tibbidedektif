@@ -25,11 +25,18 @@ const translations = {
         
         // Introduction Section
         introTitle: "🧡 Giriş — Bu sayfa neden var?",
-        introGreeting: "Merhaba, ben Dr. Sadık Barış Adıgüzel.",
-        introP1: "Bu sayfayı, \"internet çok karışık, hocam ne yapacağımızı bilemiyoruz\" diyen tüm aileler ve bireyler için hazırladım.",
-        introP2: "benim için sadece bir meslek değil — gerçek bir tutku.",
-        introP3: "Bazen PubMed'deki en son araştırmalardan başlayıp WHO verilerine, Ayurveda'dan Çin tıbbına kadar geniş bir yelpazede araştırma yapıyorum. Hangi kaynaktan gelirse gelsin, doğru bilgiyi bulmak ve sizlerle paylaşmak benim hem zevk aldığım hem de sorumluluğunu hissettiğim bir iş.",
-        introP4: "Süreç çok basit: Siz sağlık sorununu benimle paylaşıyorsunuz, ben tüm kaynaklara dalıp araştırıyorum ve size anlaşılır, pratik ve yol gösterici bir özet sunuyorum.",
+        introPara1: "<strong>👨‍⚕️ Merhaba, ben Dr. Sadık Barış Adıgüzel.</strong>",
+        introPara2: "Bu sayfayı, <em>“İnternet çok karışık hocam, ne yapacağımızı bilemiyoruz…”</em> diyen tüm aileler için hazırladım.",
+        introPara3: "Ben bir aile hekimiyim. Mesleğim gereği, bir yandan çocuklarla, bir yandan anne ve babalarla çalışıyorum.",
+        introPara4: "Ama bunun ötesinde, aile olmanın tüm yönleriyle ilgilenmeyi seviyorum: bir çocuğun ateşinden endişelenen bir annenin kaygısıyla da, kronik hastalıklarıyla uğraşan bir babanın kararsızlıklarıyla da yakından tanışığım.",
+        introPara5: "<strong>Tıbbi Dedektiflik</strong> ise bu mesleğin içindeki özel bir <em>tutkum</em> haline geldi.",
+        introPara6: "Bir sağlık sorusuyla karşılaştığımda, sadece <em>“ne olmuş?”</em> diye değil, <em>“neden olmuş, nereye evrilebilir ve neye dikkat etmeli?”</em> diye sormayı seviyorum.",
+        introPara7: "Bu nedenle bazen araştırmalarıma, tıp dünyasının en güvenilir bilimsel kaynaklarından biri olan <strong>PubMed</strong>'deki güncel makalelerle başlıyorum.",
+        introPara8: "Bazen <strong>Dünya Sağlık Örgütü (WHO)</strong> gibi uluslararası sağlık otoritelerinin önerilerine bakıyorum.",
+        introPara9: "Bazen de dünyanın farklı yaklaşımlarını – örneğin <strong>Ayurveda</strong> (Hindistan kaynaklı geleneksel tıp) ya da <strong>Çin tıbbı</strong> gibi alternatif sistemleri – karşılaştırarak değerlendiriyorum.",
+        introPara10: "Hangi kaynakta olursa olsun, önemli olan sizin için <strong>güvenilir, sade ve anlamlı</strong> bir yol haritası sunabilmek.",
+        introPara11: "Siz bana sağlıkla ilgili yaşadığınız durumu anlatıyorsunuz, ben araştırıyor, süzüyor ve size özel bir özet çıkarıyorum.",
+        introPara12: "Karmaşayı anlamaya çeviriyor, internette kaybolmadan yolunuzu bulmanıza yardımcı olmaya çalışıyorum.",
         
         // How It Works Section
         howItWorksTitle: "🔍 Bu Sistem Nasıl İşliyor?",
@@ -121,11 +128,18 @@ const translations = {
         
         // Introduction Section
         introTitle: "🧡 Introduction — Why does this page exist?",
-        introGreeting: "Hello, I am Dr. Sadık Barış Adıgüzel.",
-        introP1: "I created this page for all families and individuals who say \"the internet is so confusing, doctor, we don't know what to do.\"",
-        introP2: "is not just a profession for me — it's a genuine passion.",
-        introP3: "Sometimes I start with the latest research on PubMed and extend to WHO data, from Ayurveda to Chinese medicine, conducting research across a wide spectrum. Whatever the source, finding accurate information and sharing it with you is both something I enjoy and feel responsible for.",
-        introP4: "The process is simple: You share your health concern with me, I dive deep into all available sources and provide you with a clear, practical and guiding summary.",
+        introPara1: "<strong>👨‍⚕️ Hello, I am Dr. Sadık Barış Adıgüzel.</strong>",
+        introPara2: "I created this page for all families who say, <em>“The internet is so confusing, doctor, we don't know what to do…”</em>",
+        introPara3: "I am a family physician. As part of my profession, I work with children on one hand, and parents on the other.",
+        introPara4: "Beyond that, I love engaging with all aspects of family life: I am closely acquainted with the anxiety of a mother worried about her child's fever, and the uncertainties of a father dealing with chronic illnesses.",
+        introPara5: "<strong>Medical Detective</strong> work has become a special <em>passion</em> of mine within this profession.",
+        introPara6: "When faced with a health question, I like to ask not just <em>“what happened?”</em> but also <em>“why did it happen, where might it lead, and what should we watch out for?”</em>",
+        introPara7: "Therefore, I sometimes begin my research with current articles on <strong>PubMed</strong>, one of the most reliable scientific resources in the medical world.",
+        introPara8: "Sometimes I look at the recommendations of international health authorities like the <strong>World Health Organization (WHO)</strong>.",
+        introPara9: "And sometimes I evaluate different global approaches by comparing them – for example, alternative systems like <strong>Ayurveda</strong> (traditional Indian medicine) or <strong>Chinese medicine</strong>.",
+        introPara10: "Whatever the source, the important thing is to be able to offer you a <strong>reliable, simple, and meaningful</strong> roadmap.",
+        introPara11: "You tell me about your health situation, I research, filter, and create a personalized summary for you.",
+        introPara12: "I work to turn confusion into understanding, helping you find your way without getting lost on the internet.",
         
         // How It Works Section
         howItWorksTitle: "🔍 How Does This System Work?",
@@ -348,16 +362,8 @@ class LanguageSystem {
         
         // Introduction section
         this.updateHTML('#intro h2', t.introTitle);
-        const introPs = document.querySelectorAll('#intro .intro-content p');
-        if (introPs.length >= 5) {
-            introPs[0].innerHTML = `<strong>${t.introGreeting}</strong>`;
-            introPs[1].innerHTML = t.introP1.replace(
-                /(internet çok karışık, hocam ne yapacağımızı bilemiyoruz|the internet is so confusing, doctor, we don't know what to do)/g, 
-                '<em>"$1"</em>'
-            );
-            introPs[2].innerHTML = `<strong>${this.currentLanguage === 'tr' ? 'Tıbbi Dedektiflik' : 'Medical Detective'}</strong> ${t.introP2.replace(/Tıbbi Dedektiflik|Medical Detective/, '')} — gerçek bir <em>${this.currentLanguage === 'tr' ? 'tutku' : 'passion'}</em>.`;
-            introPs[3].innerHTML = t.introP3.replace(/(PubMed|WHO|Ayurveda|Çin tıbbına|Chinese medicine)/g, '<strong>$1</strong>');
-            introPs[4].innerHTML = t.introP4.replace(/(anlaşılır, pratik ve yol gösterici|clear, practical and guiding)/g, '<strong>$1</strong>');
+        for (let i = 1; i <= 12; i++) {
+            this.updateHTML(`#intro .intro-text p[data-translate="introPara${i}"]`, t[`introPara${i}`]);
         }
         
         // How it works section
